@@ -24,6 +24,7 @@ public class UserFlashcardLearningData {
     private Flashcard flashcard;
     private int repetition;
     private double easinessFactor;
+    @Column(name = "review_interval")
     private int interval;
     private LocalDate nextReviewDate;
 }

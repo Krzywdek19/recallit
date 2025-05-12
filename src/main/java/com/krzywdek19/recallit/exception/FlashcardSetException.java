@@ -1,7 +1,12 @@
 package com.krzywdek19.recallit.exception;
 
+import lombok.Getter;
+
+@Getter
 public class FlashcardSetException extends RuntimeException {
-  public FlashcardSetException(String message) {
-    super(message);
-  }
+    private final FlashcardSetError error;
+    public FlashcardSetException(FlashcardSetError flashcardSetError) {
+        super(flashcardSetError.getMessage());
+        error = flashcardSetError;
+    }
 }

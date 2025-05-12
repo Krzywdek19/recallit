@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: recallit
+jwt:
+    secret-key: OKFM6DgzObb4qlz+1QfGkxrk75hwuK8f53Le83kwkZI=
+    expiration: 360000

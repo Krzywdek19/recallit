@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,7 +23,7 @@ public class FlashcardSet {
     @NotBlank(message = "Name cannot be blank")
     private String name;
     @OneToMany(mappedBy = "flashcardSet", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Flashcard> flashcards;
+    private List<Flashcard> flashcards = new ArrayList<>();
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

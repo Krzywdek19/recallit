@@ -1,5 +1,10 @@
-package com.krzywdek19.recallit.dto;
+package com.krzywdek19.recallit.request;
 
-public class FlashcardSetDto {
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+
+@Getter
+public class CreateFlashcardSetRequest {
+    @NotBlank(message = "Flashcard set name cannot be blank")
     private String name;
 }
